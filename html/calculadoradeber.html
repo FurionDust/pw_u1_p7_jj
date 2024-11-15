@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+    <header>
+        <h1 style="text-align: center; color: darkcyan;">Calculadora</h1>
+    </header>
+
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <ul id="idmenu" style="list-style-type: none; padding: 0;">
+            <li style="display: inline; margin-right: 20px; font-size: 18px;">Calculadora 1</li>
+            <li style="display: inline; margin-right: 20px; font-size: 18px;">Calculadora 2</li>
+            <li style="display: inline; font-size: 18px;">Calculadora 3</li>
+        </ul>
+    </nav>
+
+    <section style="text-align: center;">
+        <div style="margin-bottom: 10px;">
+            <label id="label1" for="numero1" style="font-size: 18px;">N&#250;mero 1</label>
+            <input id="numero1" type="number" style="margin-left: 10px; padding: 5px;">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="numero2" style="font-size: 18px;">N&#250;mero 2</label>
+            <input id="numero2" type="number" style="margin-left: 10px; padding: 5px;">
+        </div>
+
+        <button style="padding: 10px 20px; margin: 5px; background-color: darkblue; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="document.getElementById('label1').style.color='yellow'">Cambiar Color</button>
+        <button style="padding: 10px 20px; margin: 5px; background-color: darkgreen; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="document.getElementById('label1').style.fontSize='40px'">Cambiar Tama&#241;o</button>
+        <button style="padding: 10px 20px; margin: 5px; background-color: darkred; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="document.getElementById('label1').innerText='Nuevo Valor'">Cambiar Texto</button>
+        <button style="padding: 10px 20px; margin: 5px; background-color: darkorange; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="document.getElementById('idmenu').innerHTML+= '<li style=\'display: inline; margin-right: 20px; font-size: 18px;\'>Calculadora 4</li>'">Agregar Elemento</button>
+
+        <div style="margin-top: 20px;">
+            <button style="padding: 10px 20px; background-color: darkcyan; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="sumar()">Sumar</button>
+            <p id="resultado" style="font-size: 18px; margin-top: 10px;">Resultado: </p>
+        </div>
+    </section>
+
+    <footer style="text-align: center; margin-top: 30px; color: gray; font-size: 14px;">
+        &copy; 2024 Calculadora.
+    </footer>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById('numero1').value) || 0;
+            const num2 = parseFloat(document.getElementById('numero2').value) || 0;
+            const resultado = num1 + num2;
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>

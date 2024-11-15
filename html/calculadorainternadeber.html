@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f3f3f3;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #2b2b52;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            font-size: 18px;
+            color: #512da8;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        label {
+            font-size: 18px;
+            color: #37474f;
+        }
+
+        input {
+            margin-left: 10px;
+            padding: 5px;
+            border: 1px solid #bdbdbd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .btn-color {
+            background-color: #009688;
+        }
+
+        .btn-size {
+            background-color: #3f51b5;
+        }
+
+        .btn-text {
+            background-color: #f57c00;
+        }
+
+        .btn-add {
+            background-color: #c2185b;
+        }
+
+        .btn-sumar {
+            background-color: #4caf50;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #757575;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+    <nav>
+        <ul id="idmenu">
+            <li>Calculadora 1</li>
+            <li>Calculadora 2</li>
+            <li>Calculadora 3</li>
+        </ul>
+    </nav>
+
+    <section>
+        <div style="margin-bottom: 10px;">
+            <label id="label1" for="numero1">N&#250;mero 1</label>
+            <input id="numero1" type="number">
+        </div>
+        <div style="margin-bottom: 20px;">
+            <label for="numero2">N&#250;mero 2</label>
+            <input id="numero2" type="number">
+        </div>
+
+        <button class="btn-color" onclick="document.getElementById('label1').style.color='purple'">Cambiar Color</button>
+        <button class="btn-size" onclick="document.getElementById('label1').style.fontSize='40px'">Cambiar Tama&#241;o</button>
+        <button class="btn-text" onclick="document.getElementById('label1').innerText='Nuevo Valor'">Cambiar Texto</button>
+        <button class="btn-add" onclick="document.getElementById('idmenu').innerHTML+= '<li style=\'display: inline; margin-right: 20px; font-size: 18px; color: #512da8;\'>Calculadora 4</li>'">Agregar Elemento</button>
+
+        <div style="margin-top: 20px;">
+            <button class="btn-sumar" onclick="sumar()">Sumar</button>
+            <p id="resultado" style="font-size: 18px; margin-top: 10px;">Resultado: </p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Calculadora.
+    </footer>
+
+    <script>
+        function sumar() {
+            const num1 = parseFloat(document.getElementById('numero1').value) || 0;
+            const num2 = parseFloat(document.getElementById('numero2').value) || 0;
+            const resultado = num1 + num2;
+            document.getElementById('resultado').innerText = `Resultado: ${resultado}`;
+        }
+    </script>
+</body>
+
+</html>
