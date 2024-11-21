@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora {
+   
+    display: grid; /*distribuir en cadricula*/
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px;
+    padding: 25px;
+    /*border: solid salmon;*/
+    background: rgb(97, 108, 114);
+    border-radius: 15px;
+    box-shadow: 15px 10px 5px 5px rgb(44, 44, 44);
+}
+
+.display{
+    grid-column: span 4;
+    text-align: right;
+    padding: 10px;
+    border: solid gray;
+    background: white;
+    margin-bottom: 15px;
+}
+
+#tec1{
+    grid-column: 2;
+}
+#tec2{
+    grid-column: span 2;
+    
+}
+
+.colum-2{
+    grid-column: span 2;
+}
