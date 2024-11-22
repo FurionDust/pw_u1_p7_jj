@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Maquetado</title>
-    </head>
-    <script src="../js/calculadora.js"></script>
+</head>
+<script src="../js/calculadora.js"></script>
 
 <body>
     <header></header>
@@ -15,19 +15,19 @@
     <section>
         <div class="container">
             <div class="calculadora">
-                <div id = "id-display" class="display">
-                    0
-                </div>
-
-                <button id ="tec1">C</button>
-                <button>&larr;</button>
+                <div id="id-display" class="display">0</div>
+        
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="backspace()">&larr;</button>
                 <button onclick="evaluarOperacion('%')">%</button>
+                <button onclick="evaluarOperacion('/')">/</button>
 
                 <button onclick="recibirValor(7)">7</button>
                 <button onclick="recibirValor(8)">8</button>
                 <button onclick="recibirValor(9)">9</button>
-                <button onclick="evaluarOperacion('X')">X</button>
+                <button onclick="evaluarOperacion('*')">*</button>
 
+                
                 <button onclick="recibirValor(4)">4</button>
                 <button onclick="recibirValor(5)">5</button>
                 <button onclick="recibirValor(6)">6</button>
@@ -38,10 +38,9 @@
                 <button onclick="recibirValor(3)">3</button>
                 <button onclick="evaluarOperacion('+')">+</button>
 
-                <button id="tec2" onclick="recibirValor(3)">0</button>
-                <button>.</button>
-                <button id="igual" >=</button>
-
+                <button id="tec2" onclick="recibirValor(0)">0</button>
+                <button onclick="recibirValor('.')">.</button>
+                <button id="igual" onclick="igual()">=</button>
             </div>
         </div>
     </section>

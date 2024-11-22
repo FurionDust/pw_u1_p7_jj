@@ -1,5 +1,5 @@
-var num1 = 0;
-var num2 = 0;
+var num1 = '';
+var num2 = '';
 var operacion = '';
 
 function setearValor(valor) {
@@ -8,33 +8,75 @@ function setearValor(valor) {
 
 function setearValorConcatenado(valor) {
     let valorActual = document.getElementById('id-display').innerText;
+    if (valorActual === '0') {
+        valorActual = '';
+    }
     document.getElementById('id-display').innerText = valorActual + valor;
 }
 
 function recibirValor(valor) {
-    if (num1 === null) {
-        num1 = valor;
+    if (operacion === '') {
+        num1 += valor;
+        setearValorConcatenado(valor);
     } else {
-        num2 = valor;
+        num2 += valor;
+        setearValorConcatenado(valor);
     }
-    console.log(num1)
+}
+
+function clearDisplay() {
+    num1 = '';
+    num2 = '';
+    operacion = '';
+    setearValor(0);
+}
+
+function backspace() {
+    let valorActual = document.getElementById('id-display').innerText;
+    if (valorActual.length > 1) {
+        setearValor(valorActual.slice(0, -1));
+    } else {
+        setearValor(0);
+    }
+    if (operacion === '') {
+        num1 = num1.slice(0, -1);
+    } else {
+        num2 = num2.slice(0, -1);
+    }
 }
 
 function evaluarOperacion(op) {
-    operacion = op;
+    if (num1 !== '') {
+        operacion = op;
+        setearValorConcatenado(' ' + op + ' ');
+    }
 }
 
 function igual() {
     let valorFinal;
-    if (operacion === '+') {
-        valorFinal = num1 + num2;
-    } else if (operacion === '-') {
-        valorFinal = num1 - num2;
-    } else if (operacion === 'X') {
-        valorFinal = num1 * num2;
-    } else if (operacion === '/') {
-        valorFinal = num1 / num2;
+    let n1 = parseFloat(num1);
+    let n2 = parseFloat(num2);
+    switch (operacion) {
+        case '+':
+            valorFinal = n1 + n2;
+            break;
+        case '-':
+            valorFinal = n1 - n2;
+            break;
+        case '*':
+            valorFinal = n1 * n2;
+            break;
+        case '/':
+            valorFinal = n1 / n2;
+            break;
+        case '%':
+            valorFinal = n1 % n2;
+            break;
+        default:
+            return;
     }
     setearValor(valorFinal);
+    num1 = valorFinal.toString();
+    num2 = '';
+    operacion = '';
 }
-
