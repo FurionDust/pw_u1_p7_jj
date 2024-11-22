@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Maquetado</title>
-</head>
+    </head>
+    <script src="../js/calculadora.js"></script>
 
 <body>
     <header></header>
@@ -14,32 +15,32 @@
     <section>
         <div class="container">
             <div class="calculadora">
-                <div class="display">
-                    1 + 2
+                <div id = "id-display" class="display">
+                    0
                 </div>
 
                 <button id ="tec1">C</button>
                 <button>&larr;</button>
-                <button>%</button>
+                <button onclick="evaluarOperacion('%')">%</button>
 
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>X</button>
+                <button onclick="recibirValor(7)">7</button>
+                <button onclick="recibirValor(8)">8</button>
+                <button onclick="recibirValor(9)">9</button>
+                <button onclick="evaluarOperacion('X')">X</button>
 
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button onclick="recibirValor(4)">4</button>
+                <button onclick="recibirValor(5)">5</button>
+                <button onclick="recibirValor(6)">6</button>
+                <button onclick="evaluarOperacion('-')">-</button>
 
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
+                <button onclick="recibirValor(1)">1</button>
+                <button onclick="recibirValor(2)">2</button>
+                <button onclick="recibirValor(3)">3</button>
+                <button onclick="evaluarOperacion('+')">+</button>
 
-                <button id="tec2">0</button>
+                <button id="tec2" onclick="recibirValor(3)">0</button>
                 <button>.</button>
-                <button>=</button>
+                <button id="igual" >=</button>
 
             </div>
         </div>

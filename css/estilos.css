@@ -11,7 +11,7 @@
     grid-template-rows: 75px 75px 75px 75px 75px 75px;
     padding: 25px;
     /*border: solid salmon;*/
-    background: rgb(97, 108, 114);
+    background: rgb(38, 38, 41);
     border-radius: 15px;
     box-shadow: 15px 10px 5px 5px rgb(44, 44, 44);
 }
@@ -21,8 +21,13 @@
     text-align: right;
     padding: 10px;
     border: solid gray;
-    background: white;
+    background: rgb(38, 38, 41);
     margin-bottom: 15px;
+    border:outset ;
+    color: white;
+    font-family: digital-7;
+    font-size: 25px;
+    text-shadow: 2px 2px rgb(42, 39, 57);
 }
 
 #tec1{
@@ -35,4 +40,27 @@
 
 .colum-2{
     grid-column: span 2;
+}
+button{
+    cursor: pointer;
+    margin: 1px;
+    border-radius: 10px;
+    border:none ;
+    background-color: rgb(56, 56, 68);
+    font-family: digital-7;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px rgb(80, 71, 71);
+}
+
+button:hover{
+    background-color: rgb(107, 107, 144);
+}
+
+button:active{
+    background-color: rgb(55, 49, 49);
+}
+#igual{
+background-color: salmon;
+color:  rgb(56, 56, 68);
 }
