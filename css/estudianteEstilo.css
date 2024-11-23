@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #59abe3; /* color en hex*/
+}
+
+p:before{
+    content: attr(type);
+    display: block;
+    margin: 3px;
+    font-size: 17px;
+    color: #5a5a5a;
+}
+
+input{
+    width: 280px;
+    border: none;
+    border-bottom: 2px solid #bebed2; 
+    background: none;
+}
+/* con esto se quita la linea externa del input*/
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #9393d6; 
+}
+
+h2{
+    margin: 10px 2px;
+    width: 180px;
+    color: #78788C;
+    border-bottom: 3px solid;
+}
+form{
+    padding: 30px 20px ;
+    width: 300px;/* ancho*/
+    height: 425px;/*alto*/
+    background: #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 5px 5px  #397196;
+
+}
