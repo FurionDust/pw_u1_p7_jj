@@ -4,52 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Maquetado</title>
 </head>
+<script src="./js/calculadora.js"></script>
 
 <body>
-    <header>
-        <h1> Mi Blog</h1>
-        <h6>Mi Blog 2</h6>
-    </header>
-    <nav>
-        <ul>
-            <li>Principal</li>
-            <li>Docentes</li>
-            <li>Estudiantes</li>
-            <li>Administrativos</li>
-            <li>Ayuda</li>
-        </ul>
-    </nav>
+    <header></header>
+    <nav></nav>
     <section>
-        <article>
-            <time datetime="01-01-2024"> Publicado el 01-01-2024</time>
-            <h2>Articulo de Ciencias</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium hic soluta ipsam sed dicta
-                dolor amet at minus accusantium eos nostrum, natus ipsum. Quaerat id perspiciatis recusandae debitis
-                aspernatur.
-            </p>
-            <footer>Comentarios (10)</footer>
-        </article>
-        <article>
-            <time datetime="02-02-2024">Publicado el 02-02-2024</time>
-            <h2>Articulo de Computación</h2>
-            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis odit quas, cupiditate ab labore quos
-                laboriosam repudiandae aliquam tempore beatae iure libero error suscipit, perferendis, iste dolorum
-                facere reiciendis? Accusantium error maxime, necessitatibus sequi fugiat harum voluptas fugit odit
-                impedit?
-            </p>
-            <footer>Comentarios (5)</footer>
-        </article>
+        <div class="container">
+            <div class="calculadora">
+                <div id="id-display" class="display">0</div>
+        
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="backspace()">&larr;</button>
+                <button onclick="evaluarOperacion('%')">%</button>
+                <button onclick="evaluarOperacion('/')">/</button>
+
+                <button onclick="recibirValor(7)">7</button>
+                <button onclick="recibirValor(8)">8</button>
+                <button onclick="recibirValor(9)">9</button>
+                <button onclick="evaluarOperacion('*')">*</button>
+
+                
+                <button onclick="recibirValor(4)">4</button>
+                <button onclick="recibirValor(5)">5</button>
+                <button onclick="recibirValor(6)">6</button>
+                <button onclick="evaluarOperacion('-')">-</button>
+
+                <button onclick="recibirValor(1)">1</button>
+                <button onclick="recibirValor(2)">2</button>
+                <button onclick="recibirValor(3)">3</button>
+                <button onclick="evaluarOperacion('+')">+</button>
+
+                <button id="tec2" onclick="recibirValor(0)">0</button>
+                <button onclick="recibirValor('.')">.</button>
+                <button id="igual" onclick="igual()">=</button>
+            </div>
+        </div>
     </section>
-    <aside>
-        <blockquote cite="https://miblog/ciencias">Referencia al articulo de ciecias</blockquote>
-        <blockquote cite="https://miblog/computacion">Referencia al articulo de computación</blockquote>
-    </aside>
-    <footer>
-        Todos los derechos resesrvados para la Universidad Central del Ecuador
-    </footer>
+    <footer></footer>
 
 </body>
 

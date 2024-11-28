@@ -43,3 +43,25 @@ form{
     box-shadow: 5px 5px  #397196;
 
 }
+
+button{
+
+    background: #e6e6e6;
+
+    box-shadow: 2px 2px #397196;
+    border-radius: 10px;
+    height: 50px;
+    width: 80px;
+    size: 25px;
+    color: #5a5a5a;
+    font-size: 15px;
+   
+    
+
+}
+
+.copia-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
